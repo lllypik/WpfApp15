@@ -1,0 +1,179 @@
+﻿<Window x:Class="WpfApp15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="3">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2" />
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1" />
+            <Button Content="Очистить" Width="100" Click="Button_Click" />
+        </StackPanel>
+
+        <FlowDocumentScrollViewer x:Name="documentScrollViewer" Grid.Row="1">
+            <FlowDocument>
+                <Paragraph FontSize="18">
+                    Обзор и тестирование материнской платы MSI MEG Z690 Ace
+                </Paragraph>
+                <Paragraph FontSize="16">
+                    Оригинал статьи смотри на <Hyperlink NavigateUri="https://www.overclockers.ua/motherboard/msi-meg-z690-ace/">overclockers.ua</Hyperlink>
+                </Paragraph>
+
+                <Paragraph>
+                    <Image Source="Img/1.jpg" Width="300" Height="300" Stretch="Uniform"/>
+                </Paragraph>
+                
+                <Paragraph>
+                         Чтобы обуздать флагманские процессоры
+                    <Underline>Alder Lake</Underline> на пределе своих возможностей, потребуется не только «прокачанная» на все сто удача, необходимо также позаботиться об эффективном охлаждении и, конечно же, обладать материнской платой высшего эшелона. Усиленная подсистема питания на 22 фазы, серьезная система охлаждения, готовность работать при отрицательных температурах, а также огромный обвес, который потребовал для себя форм-фактор EATX. И все это в MSI MEG Z690 Ace.
+                </Paragraph>
+
+                <Paragraph FontSize="16">
+                    <Bold>  Характеристики </Bold>
+                </Paragraph>
+                <Section FontSize="14" Background="LightBlue" Margin="5" Padding="5">
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="1*"/>
+                        <TableColumn Width="3*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                        <Bold>Модель</Bold>
+                                 </Paragraph>
+                            </TableCell>
+                             <TableCell>
+                                <Paragraph>
+                                        <Bold>
+                                            MSI MEG Z690 Ace
+                                        </Bold>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Чипсет
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Intel Z690
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Процессорный разъём
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    LGA 1700
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Процессоры
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Core i9, Core i7, Core i5, Core i3, Pentium Gold, Celeron поколения Alder Lake (12th Gen)
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Встроенный звук
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Realtek ALC4080
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                    </TableRowGroup>
+                </Table>
+                </Section>
+
+                <Paragraph>
+                    Внутри коробка разделена на два блока. В первом располагается материнская плата в антистатическом пакете. Во втором содержится все остальное, а именно:
+                </Paragraph>
+
+                <List MarkerStyle="Circle">
+                    <ListItem>
+                        <Paragraph>
+                            инструкции быстрого начала, документация, благодарность за покупку и прочее;
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            USB-накопитель 16 ГБ с драйверами и ПО;
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            комплект для монтажа накопителей M.2 (EZ M.2 Clip, винты, стойки);
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            два переходника mini DisplayPort (mDP) на стандартный DisplayPort (DP);
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Y-разветвитель RGB LED
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            кабель CORSAIR RGB LED;
+                        </Paragraph>
+                    </ListItem>
+                </List>
+
+                <Paragraph>
+                    Для тех, кто захочет подключить несколько мониторов через встроенное в процессор видеоядро
+                    имейте в виду, что разъемы mini DP в блоке Thunderbolt 4 не выводят картинку с IGP, 
+                    они предназначены для устройств, которые подключены по шине Thunderbolt. Так что встроенная
+                    графика способна вывести картинку только на один монитор через совмещенный с DisplayPort v1.4 
+                    разъем USB Type-C и для этого переходник в комплекте не предусмотрен (например, потребуется
+                    приобрести отдельно переходник USB Type-C > DisplayPort). В обзоре использовался переходник USB 
+                    Type-C > HDMI, который тоже работал как положено.
+                </Paragraph>
+                
+                <BlockUIContainer>
+                    <StackPanel>
+                        <TextBlock
+                            Text="Для перехода на полную версию обзора нажми на кнопку"
+                            FontSize="12"
+                            FontWeight="Bold"/>
+                        <Button Content="overclockers.ua"/>
+                    </StackPanel>
+                </BlockUIContainer>                            
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
